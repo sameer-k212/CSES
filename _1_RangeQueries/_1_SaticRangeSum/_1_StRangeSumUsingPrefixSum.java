@@ -1,7 +1,8 @@
 package _1_RangeQueries._1_SaticRangeSum;
 import java.io.*;
+// solved using prefix sum logic.
 
-public class RangeSum {
+public class _1_StRangeSumUsingPrefixSum {
     static class FastScanner {
         private final byte[] buffer = new byte[1 << 16];
         private int ptr = 0, len = 0;

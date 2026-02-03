@@ -1,7 +1,10 @@
 package _1_RangeQueries._2_StaticRangMinElement;
 import java.io.*;
+// segment tree solution.
+//Segment Tree → Range query + complex operations
+//        (min, max, gcd, sum, custom merge)
 
-class SegmentTree {
+class _1_StRangeMinElementUsingSegmentTree {
     static class FastScanner {
         private final byte[] buffer = new byte[1 << 16]; // 64 KB
         private int ptr = 0, len = 0;
@@ -33,7 +36,7 @@ class SegmentTree {
     }
     long segmentTree[];
 
-    public SegmentTree(int n) {
+    public _1_StRangeMinElementUsingSegmentTree(int n) {
         segmentTree = new long[n * 4]; // Allocate enough space for segment tree
     }
 
@@ -75,7 +78,7 @@ class SegmentTree {
             arr[i] = fs.nextLong();
         }
 
-        SegmentTree obj = new SegmentTree(n);
+        _1_StRangeMinElementUsingSegmentTree obj = new _1_StRangeMinElementUsingSegmentTree(n);
         obj.buildSegmentTree(arr, 0, 0, n - 1);
         while (q-- > 0) {
             int left = (int) fs.nextLong() - 1;
